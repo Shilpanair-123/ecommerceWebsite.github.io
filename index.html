@@ -1,0 +1,88 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>MyStore</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
+</head>
+    <body>
+<div class="header">
+<div class="navbar">
+    <div class="logo">
+    </div>
+<nav>
+    <ul id="MenuItems">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Account</a></li>
+    </ul>
+</nav>
+<img src="images/cart.png" width="30px" height="30px">
+<img src="images/menu.png" class= "menu-icon"  onclick="menutoggle()" width="30px" height="30px">
+</div>
+<a href="login.php"></a>
+<!-------------------account page--------------------->
+
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/image1.jfif" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">LOGIN</span>
+                        <span onclick="register()">REGISTER</span>
+                        <hr id="Indicator"
+                    </div>
+                    <form id="LoginForm">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">LOGIN</button>
+                        
+                        <a href="">Forgot password</a>
+                        <a href="home.html"></a>
+                    </form>
+                    <form id="RegForm">
+                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">REGISTER</button>
+                    </form>
+                    
+                   
+                   
+                   
+                    <!-------------------------js for toggle form--------------->
+<script>
+    var Loginform = document.getElementsById("Loginform");
+    var Regform = document.getElementsById("Regform");
+    var Indicator = document.getElementsById("Indicator")
+function login()
+{
+    RegForm.style.transform = "translatex(300px)";
+    LoginForm.style.transform = "translatex(300px)";
+    Indicator.style.transform = "translatex(0px)";
+}
+function register()
+{
+    RegForm.style.transform = "translatex(0px)";
+    LoginForm.style.transform = "translatex(0px)";
+    Indicator.style.transform = "translatex(100px)";
+}
+</script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+</html>
